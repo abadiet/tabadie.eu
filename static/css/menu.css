@@ -1,0 +1,286 @@
+:root {
+    --menu-bar-height: 44px;
+    --menu-button-height: calc(var(--menu-bar-height) * 0.26);
+    --menu-open-duration: 600ms;
+    --menu-elem-duration: 300ms;
+    --menu-sliding-duration: 300ms;
+}
+
+
+/* WHOLE CONTAINER */
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 999;
+    opacity: 0;
+    height: var(--menu-bar-height);
+    background-color: #16161700;
+    transition: opacity 0.25s ease-out, background-color calc(var(--menu-open-duration)) ease-out;
+}
+.menu-container.show {
+    height: var(--viewport-height);
+    background-color: var(--background-color-second);
+}
+.menu-container.show.hiding {
+    background-color: #16161700;
+}
+
+/* BAR */
+
+.menu-bar {
+    position: fixed;
+    top: 0;
+    left: calc(calc(2vw + var(--menu-button-height) * 2 + 2vw));
+    width: calc(100vw - 2 * calc(2vw + var(--menu-button-height) * 2 + 2vw));
+    height: var(--menu-bar-height);
+    opacity: 0;
+    background: #00000000;
+    z-index: auto;
+    font-weight: bold;
+    transition: opacity calc(var(--menu-open-duration) / 1.7) ease-out;
+}
+.menu-bar.show {
+    opacity: 1;
+}
+
+.menu-bar > .row-container {
+    gap: 10px;
+}
+
+.menu-bar .text {
+    font-size: calc(var(--menu-bar-height) * 0.5);
+}
+
+.menu-bar-logo {
+    height: calc(var(--menu-bar-height) * 0.7);
+}
+*
+
+/* BUTTON */
+
+.menu-button {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    height: var(--menu-bar-height);
+    width: calc(2vw + var(--menu-button-height) * 2 + 2vw);
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+}
+.menu-button .line:first-child {
+    top: calc(var(--menu-bar-height) * 0.37);
+}
+.menu-button .line:last-child {
+    top: calc(var(--menu-bar-height) * 0.63);
+}
+
+.line {
+    position: absolute;
+    width: calc(var(--menu-button-height) * 2);
+    height: 2px;
+    right: 2vw;
+    background-color: var(--text-color-second);
+    opacity: 80%;
+}
+
+.menu-button.close .line:first-child {
+    --translation: calc(var(--menu-button-height) / 2);
+    --rotation: 45deg;
+    animation: moveAndRotate 0.2s ease-in-out forwards;
+}
+
+.menu-button.open .line:first-child {
+    --translation: calc(var(--menu-button-height) / 2);
+    --rotation: 45deg;
+    animation: rotateAndMove 0.2s ease-in-out forwards;
+}
+
+.menu-button.close .line:last-child {
+    --translation: calc(var(--menu-button-height) / -2);
+    --rotation: -45deg;
+    animation: moveAndRotate 0.2s ease-in-out forwards;
+}
+
+.menu-button.open .line:last-child {
+    --translation: calc(var(--menu-button-height) / -2);
+    --rotation: -45deg;
+    animation: rotateAndMove 0.2s ease-in-out forwards;
+}
+
+@keyframes moveAndRotate {
+    0% {
+        transform: translateY(0);
+        opacity: 80%;
+    }
+    60% {
+        transform: translateY(var(--translation));
+        opacity: 80%;
+    }
+    100% {
+        transform: translateY(var(--translation)) rotate(var(--rotation));
+        opacity: 100%;
+    }
+}
+
+@keyframes rotateAndMove {
+    0% {
+        transform: translateY(var(--translation)) rotate(var(--rotation));
+        opacity: 100%;
+    }
+    40% {
+        transform: translateY(var(--translation));
+        opacity: 80%;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 80%;
+    }
+}
+
+
+/* MENU */
+
+.menu-open {
+    position: relative;
+    width: 100vw;
+    height: var(--menu-bar-height);
+    background-color: #161617cf;
+    backdrop-filter: saturate(130%) blur(10px);
+    transform-origin: top;
+    --menu-open-scaleY: 1;
+    transform: scaleY(var(--menu-open-scaleY));
+    transition: transform var(--menu-elem-duration) ease-out;
+}
+
+@supports not (backdrop-filter: saturate(130%) blur(10px)) {
+    .menu-open {
+        background-color: #161617f8;
+    }
+}
+
+.row-container-menu {
+    position: absolute;
+    --menu-gap: 50px;
+    top: var(--menu-gap);
+    left: var(--menu-gap);
+    height: auto;
+    width: auto;
+    gap: var(--menu-gap);
+    padding-bottom: var(--menu-gap);
+}
+
+.menu {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: none;
+}
+.menu.show {
+    display: flex;
+}
+.menu.show.sliding-left {
+    animation: sliding-left var(--menu-sliding-duration) ease-in-out forwards;
+}
+.menu.show.sliding-right {
+    animation: sliding-right var(--menu-sliding-duration) ease-in-out forwards;
+}
+
+@keyframes sliding-left {
+    0% {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+    100% {
+        transform: translateX(-8px);
+        opacity: 0%;
+    }
+}
+
+@keyframes sliding-right {
+    0% {
+        transform: translateX(-8px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 100%;
+    }
+}
+
+.menu > * {
+    margin-top: 2vh;
+    --elem-animation-translation: -9px;
+    transform: translateY(var(--elem-animation-translation));
+    opacity: 0%;
+}
+.menu > *.show:not(.noanimation) {
+    animation: menuElemTransitionFwd var(--menu-elem-duration) ease-in-out forwards;
+}
+.menu > *.show.noanimation {
+    transform: translateY(0px);
+    opacity: 100%;
+}
+.menu > *.show.hiding {
+    animation: menuElemTransitionBwd calc(var(--menu-elem-duration) * 0.35) ease-in-out forwards;
+}
+
+@keyframes menuElemTransitionFwd {
+    0% {
+        transform: translateY(var(--elem-animation-translation));
+        opacity: 0%;
+    }
+    50% {
+        opacity: 35%;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes menuElemTransitionBwd {
+    0% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+    90% {
+        transform: translateY(0px);
+        opacity: 10%;
+    }
+    100% {
+        transform: translateY(var(--elem-animation-translation));
+        opacity: 0%;
+    }
+}
+
+
+/* BACK ARROW */
+
+.menu-back-arrow {
+    display: none;
+    position: fixed;
+    top: calc(var(--menu-bar-height) * 0.31);
+    left: 2vw;
+    width: calc(var(--menu-bar-height) * 0.42);
+    height: auto;
+    cursor: pointer;
+    z-index: 1;
+}
+.menu-back-arrow.show {
+    display: block;
+}
+.menu-back-arrow.show.sliding-left {
+    animation: sliding-left var(--menu-sliding-duration) ease-in-out forwards;
+}
+.menu-back-arrow.show.sliding-right {
+    animation: sliding-right var(--menu-sliding-duration) ease-in-out forwards;
+}
+.menu-back-arrow.show.hiding {
+    animation: menuElemTransitionBwd var(--menu-elem-duration) ease-in-out forwards;
+}
