@@ -15,7 +15,6 @@
     left: 0;
     width: 100vw;
     z-index: 999;
-    opacity: 0;
     height: var(--menu-bar-height);
     background-color: #16161700;
     transition: opacity 0.25s ease-out, background-color calc(var(--menu-open-duration)) ease-out;
@@ -57,7 +56,7 @@
 .menu-bar-logo {
     height: calc(var(--menu-bar-height) * 0.7);
 }
-*
+
 
 /* BUTTON */
 
@@ -265,12 +264,29 @@
 .menu-back-arrow {
     display: none;
     position: fixed;
-    top: calc(var(--menu-bar-height) * 0.31);
-    left: 2vw;
-    width: calc(var(--menu-bar-height) * 0.42);
-    height: auto;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    height: var(--menu-bar-height);
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
     z-index: 1;
+}
+.menu-back-arrow > .line:first-child {
+    transform-origin: center;
+    width: calc(var(--menu-bar-height) * 0.28);
+    top: calc(var(--menu-bar-height) * 0.41);
+    left: 2.3vw;
+    transform: rotate(-45deg);
+}
+.menu-back-arrow > .line:last-child {
+    transform-origin: center;
+    width: calc(var(--menu-bar-height) * 0.28);
+    top: calc(var(--menu-bar-height) * 0.59);
+    left: 2.3vw;
+    transform: rotate(45deg);
 }
 .menu-back-arrow.show {
     display: block;
