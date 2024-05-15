@@ -325,34 +325,37 @@ body {
 }
 #hobbies .albums {
     position: relative;
-    margin-left: calc(-1 * var(--margin-side));
-    --albums-height: 20vh;
+    --albums-height: 40vh;
     height: var(--albums-height);
     width: 100vw;
     max-width: 100vw;
     overflow: hidden;
     --gap: 0px;
 }
-#hobbies .albums:nth-child(1) > .image-container {
+#hobbies .albums > .image-container {
     position: relative;
-    height: 100%;
+    height: 50%;
+    max-width: none !important;
+}
+#hobbies .albums > .image-container > img {
+    max-width: none !important;
+}
+#hobbies .albums > :nth-child(1) {
     transform: translateX(0);
     animation: albumsMoveFwd 45s linear infinite alternate;
 }
-#hobbies .albums:nth-child(2) > .image-container {
-    position: relative;
-    height: 100%;
-    transform: translateX(0);
+#hobbies .albums > :nth-child(2) {
+    transform: translateX(calc(-28.073284314 * var(--albums-height) + 100vw));
     animation: albumsMoveBwd 45s linear infinite alternate;
 }
 @keyframes albumsMoveFwd {
     100% { 
-      transform: translateX(calc(-57.155 * var(--albums-height) + 100vw));
+      transform: translateX(calc(-28.073284314 * var(--albums-height) + 100vw));
     }
 }
 @keyframes albumsMoveBwd {
     100% {
-      transform: translateX(calc(57.155 * var(--albums-height) - 100vw));
+      transform: translateX(0);
     }
 }
 
