@@ -391,6 +391,38 @@ body {
     opacity: 0.6;
 }
 
+#pneatm-hello {
+    --gap: var(--margin-element-main);
+    --icon-size: calc(2 * var(--font-size-text));
+}
+#pneatm-hello > .image-container {
+    width: 700px;
+    --effect-size: 5%;
+}
+#pneatm-hello > .image-container > img {
+    border-radius: 15px;
+}
+#pneatm-hello > .text {
+    --gap: var(--font-size-text);
+}
+
+#pneatm-introduction {
+    --gap: var(--margin-element-second);
+}
+
+#pneatm-nowadays {
+    --gap: var(--margin-element-main);
+}
+#pneatm-nowadays > .image-container {
+    width: 500px;
+    --effect-size: 5%;
+}
+#pneatm-nowadays > .image-container > img {
+    border-radius: 15px;
+}
+#pneatm-nowadays > .text {
+    --gap: var(--font-size-text);
+}
 
 /* DEBUG */
 
