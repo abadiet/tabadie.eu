@@ -291,12 +291,14 @@ body {
     z-index: 1;
     text-align: start;
 }
-@media (max-width: 1220px) {
+@media (max-width: 1114px) {
     #hello {
         background-image: linear-gradient(to bottom, #fbfbfd00, 90% , var(--background-color-main)), url("/static/img/hello_bkg.jpg");
         background-size: auto 100%;
         background-position: center;
         background-repeat: no-repeat;
+        padding-bottom: 15vh;
+        height: auto;
     }
     #hello > #hello-bkg {
         display: none;
