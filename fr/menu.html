@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/menu.css">
+        <script src="/static/js/viewport.js"></script>
+        <script src="/static/js/text.js"></script>
+    </head>
+<body class="color-inverted" style="height: 100vh; background-color: #00000000;">
+    <div id="menu-open" class="menu-open"></div>
+    <button id="back-arrow" class="menu-back-arrow">
+        <div class="line"></div>
+        <div class="line"></div>
+    </button>
+    <div id="row-container-menu" class="row-container left-align top-align row-container-menu">
+        <div id="primary-menu" class="column-container left-align menu" style="--gap: 0;">
+            <a href="/fr#about" onclick="parent.document.getElementById('menu-button').click();" class="text preserve title link link-effect" target="_parent">Moi</a>
+            <button id="projects" type="button" class="text preserve title link bold-link link-effect">Projets</button>
+            <a href="/fr#hobbies" onclick="parent.document.getElementById('menu-button').click();" class="text preserve title link link-effect" target="_parent">Passions</a>
+            <a href="/fr#contacts" onclick="parent.document.getElementById('menu-button').click();" class="text preserve title link link-effect" target="_parent">Contacts</a>
+        </div>
+        <div id="submenus">
+            <div id="projects-menu" class="column-container left-align menu" style="--gap: 0;">
+                <a href="/fr#projects" onclick="parent.document.getElementById('menu-button').click();" class="text preserve title link link-effect" target="_parent">Projects</a>
+                <a href="/fr/projects/PNEATM" class="text preserve title link link-effect" target="_parent">PNEATM</a>
+                <a href="/fr/projects/ensmasteel-robot-code" class="text preserve title link link-effect" target="_parent">ENSMASTEEL</a>
+                <a href="https://github.com/titofra/ESP-website" class="text preserve title link link-effect" target="_parent">ESP's Website</a>
+                <a href="https://github.com/titofra/ISAE-ENSMA-Gala-2024-website" class="text preserve title link link-effect" target="_parent">Gala's Website</a>
+                <a href="/fr/projects/distributed-computing" class="text preserve title link link-effect" target="_parent">Distributed Computing</a>
+                <a href="/fr/projects/NEAT" class="text preserve title link link-effect" target="_parent">NEAT</a>
+                <a href="/fr/projects/spotify-mod" class="text preserve title link link-effect" target="_parent">Spotify Modding</a>
+                <a href="/fr/projects/BETIA" class="text preserve title link link-effect" target="_parent">BETIA</a>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/menu.js"></script>
+</body>
+</html>

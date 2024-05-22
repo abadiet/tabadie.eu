@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#161617">
+    <meta property="og:image" content="/static/img/amasso.jpg"/>
+    <title>Titouan ABADIE</title>
+    <link rel="shortcut icon" type="image/png" href="/static/img/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/menu.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <script src="/static/js/viewport.js"></script>
+    <script src="/static/js/picture.js"></script>
+    <script src="/static/js/text.js"></script>
+    <script src="/static/js/entry.js"></script>
+</head>
+<body>
+
+    <div id="menu-container" class="menu-container">
+        <div id="menu-bar" class="menu-bar color-inverted row-container noflex show">
+            <div class="row-container noflex left-align">
+                <img src="/static/img/logo.png" class="menu-bar-logo">
+                <span class="text preserve">Titouan ABADIE</span>
+            </div>
+        </div>
+        <button id="menu-button" class="menu-button">
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+        <iframe src="/fr/menu.html" style="border: none; width: 100%; height: 100%;"></iframe>
+    </div>
+
+    <div id="pneatm-hello" class="content-container row-container flex">
+        <div class="image-container blur-around fixed-width"><img src="/static/img/pneatm.png"></div>
+        <div class="text column-container left-align">
+            <span class="text title">Polymorphic NeuroEvolution of Augmenting Topologies with Memory (PNEATM)</span><br>
+            <span>Pure C++ library for a machine learning technique designed to evolve artificial neural networks. PNEATM offers several advantages such as handling various data types, supporting multiple data types simultaneously, utilizing multiple activation functions, dynamically evolving activation functions, and accessing previous processed data.</span><br>
+            <div class="row-container wrap left-align" style="--gap: calc(var(--icon-size) / 2);">
+                <a href="https://github.com/titofra/PNEATM" class="image-container blur-around fixed-height" style="height: calc(var(--icon-size));"><img src="/static/img/github-full.png"></a>
+                <div class="image-container blur-around fixed-height" style="height: var(--icon-size);"><img src="/static/img/c++.png"></div>
+                <a href="https://github.com/XAMPPRocky/tokei" style="height: calc(var(--icon-size) / 2);"><div class="image-container blur-around fixed-height" style="height: 100%"><img src="/static/img/PNEATM-Nlines.svg"></div></a>
+            </div><br>
+        </div>
+    </div>
+
+    <div id="pneatm-introduction" class="content-container color-inverted column-container left-align">
+        <div class="text title preserve centered" style="width: 100%;">Why</div>
+        <div class="column-container" style="width: 100%;">
+            <div class="text centered" style="max-width: 50vw;">
+                I always wanted to create my own machine learning algorithm. Moreover, I like the fact that genetic algorithms are nature-inspired algorithms and especially the ones that create artificial neural networks as it is a brain-inspired structure. That is why I have decided to conceive and implement a machine learning technique able to evolve artificial neural networks.<br>
+                As a first step and to learn more about C, C++, and assembly optimizations, I implemented a pure C++ NeuroEvolution of Augmenting Topologies (NEAT) algorithm.<br>
+                I then dived into the world of so many things I did not expect to learn !
+            </div>
+        </div>
+        <div class="text">
+            <div class="text subtitle preserve entry-slide-left">Goals</div><br>
+            <div class="entry-slide-left">Neuroevolution of augmenting topologies (NEAT) is a machine learning technique used to evolve artificial neural networks. NEAT employs a genetic algorithm to optimize the topology, weights, and activation functions of neural networks in order to solve a given problem. By dynamically adding or removing neurons and connections, NEAT enables networks to evolve and adapt over time. It is commonly applied to complex tasks such as game playing and robotics, where manually designed neural networks may prove ineffective. However, NEAT does have certain limitations, including a lack of memory and difficulty in handling multiple types of data.</div>
+            <div class="entry-slide-left">To address these limitations, the primary goal of PNEATM is to provide a substantial memory capacity and the ability to handle various forms of data. This enhancement is intended to enable its utilization for more complex tasks.</div>
+        </div>
+        <div class="text">
+            <div class="text subtitle preserve entry-slide-left">Pros of PNEATM</div><br>
+            <div class="entry-slide-left" style="--text-color: #b5ffbd; color: var(--text-color);">Handling various data types</div>
+            <div class="entry-slide-left" style="margin-left: 3vw;">This allows us to use more inputs/outputs as the network can distinguish different objects. For example, two 5-element vectors are not considered as 10 inputs but only 2 inputs. This helps the neural network better understand what it is processing.</div><br>
+            <div class="entry-slide-left" style="--text-color: #b5ffbd; color: var(--text-color);">Support for multiple data types simultaneously</div>
+            <div class="entry-slide-left" style="margin-left: 3vw;">PNEATM widens its capacities by accommodating different types of data in a single network.</div><br>
+            <div class="entry-slide-left" style="--text-color: #b5ffbd; color: var(--text-color);">Multiple activation functions</div>
+            <div class="entry-slide-left" style="margin-left: 3vw;">PNEATM can employ various activation functions, expanding its capabilities to determine the best-suited functions. This flexibility is particularly valuable in tasks like image processing where traditional activation functions like sigmoid may not be ideal (utilizing convolutions, blurring functions, etc.).</div><br>
+            <div class="entry-slide-left" style="--text-color: #b5ffbd; color: var(--text-color);">Dynamic activation functions evolution</div>
+            <div class="entry-slide-left" style="margin-left: 3vw;">As connection weights are mutated, activation function parameters are also evolved. PNEATM selects the most suitable function with its optimal parameters for each specific application.</div><br>
+            <div class="entry-slide-left" style="--text-color: #b5ffbd; color: var(--text-color);">Access to previous processed data</div>
+            <div class="entry-slide-left" style="margin-left: 3vw;">The network can retrieve any previously processed data from memory, allowing it to consider past inputs or outputs in its decision-making process.</div><br>
+            <div class="entry-slide-left" style="--text-color: #b5ffbd; color: var(--text-color);">Diversity and exploration</div>
+            <div class="entry-slide-left" style="margin-left: 3vw;">PNEATM's lack of strong restrictions allows it to explore a wide range of networks in the network's space, leading to improved diversity.</div>
+        </div>
+        <div class="text">
+            <div class="text subtitle preserve entry-slide-left">Cons of PNEATM</div><br>
+            <div class="entry-slide-left" style="--text-color: #ffb5b5; color: var(--text-color);">Complexity and execution time</div>
+            <div class="entry-slide-left" style="margin-left: 3vw;">Due to the network's unrestricted nature, it explores a wide range of networks in the network's space, leading to increased complexity and execution time.</div>
+        </div>
+    </div>
+
+    <div id="pneatm-nowadays" class="content-container row-container flex">
+        <div class="text column-container left-align">
+            <div class="text title preserve">Nowadays</div>
+            <div class="entry-slide-left">I consider that I have reached the goal of this project, and I may not update it in the future.</div>
+            <div class="entry-slide-left">In its current state, PNEATM is able to produce and evolve neural networks for an infinite range of applications, which was one of the main goals.</div>
+            <div class="entry-slide-left">However, even if I managed to optimize it to an absurd level, the algorithm is still pretty slow for intensive applications.</div>
+            <div class="entry-slide-left">Finally, I learned so much more than I initially expected that I couldn't really hope for more from this project.</div>
+            <div class="entry-slide-left">I used PNEATM in several cases, and a snake powered by an artificial neural network evolved by the algorithm is provided on the GitHub repository as a kind of proof of concept.</div>
+            <br>
+            <div class="entry-slide-left">The following graph highlights an over-representation problem of the red species. Optimizations and addressing this over-representation issue are the last improvements that remain to be done.</div>
+        </div>
+        <div class="image-container fixed-width"><img src="/static/img/pneatm_over-representation_problem.png"></div>
+    </div>
+
+    <div class="copyright">
+        <div class="text centered">© 2024 Titouan Abadie. All rights reserved</div>
+    </div>
+
+</body>
+</html>

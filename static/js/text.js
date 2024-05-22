@@ -1,3 +1,13 @@
+var show_more_text;
+var show_less_text;
+if (window.location.href.startsWith('https://tabadie.eu/fr')) {
+    show_more_text = "voir plus";
+    show_less_text = "voir moins";
+} else {
+    show_more_text = "show more";
+    show_less_text = "show less";
+}
+
 window.addEventListener("DOMContentLoaded", function() {
 
     /* MORE */
@@ -5,14 +15,14 @@ window.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll(".more").forEach(more => {
             const target = more.previousElementSibling;
             target.style.display = "none";
-            more.innerHTML = "show more";
+            more.innerHTML = show_more_text;
             more.addEventListener("click", function() {
             if (target.style.display == "none") {
                 target.style.display = "unset";
-                more.innerHTML = "show less";
+                more.innerHTML = show_less_text;
             } else {
                 target.style.display = "none";
-                more.innerHTML = "show more";
+                more.innerHTML = show_more_text;
             }
         });
     });
