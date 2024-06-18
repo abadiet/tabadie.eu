@@ -30,7 +30,7 @@ body {
     --margin-element-main: 5vw;
     --margin-element-second: 3vw;
 
-    --font-size-text: calc(0.9 * (0.7rem + 0.8vmin));
+    --font-size-text: 1.08rem;
 
     --link-effect-step: 400ms;
 }
@@ -307,11 +307,11 @@ body {
 
 .entry-slide-left,
 .entry-slide-right {
-    -webkit-transition: -webkit-filter 0.6s ease-out, -webkit-transform 0.6s ease-out;
-    transition: -webkit-filter 0.6s ease-out, -webkit-transform 0.6s ease-out;
-    -o-transition: filter 0.6s ease-out, transform 0.6s ease-out;
-    transition: filter 0.6s ease-out, transform 0.6s ease-out;
-    transition: filter 0.6s ease-out, transform 0.6s ease-out, -webkit-filter 0.6s ease-out, -webkit-transform 0.6s ease-out;
+    -webkit-transition: -webkit-filter 0.4s ease-out, -webkit-transform 0.4s ease-out;
+    transition: -webkit-filter 0.4s ease-out, -webkit-transform 0.4s ease-out;
+    -o-transition: filter 0.4s ease-out, transform 0.4s ease-out;
+    transition: filter 0.4s ease-out, transform 0.4s ease-out;
+    transition: filter 0.4s ease-out, transform 0.4s ease-out, -webkit-filter 0.4s ease-out, -webkit-transform 0.4s ease-out;
 }
 
 
