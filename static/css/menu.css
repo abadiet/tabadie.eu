@@ -61,6 +61,17 @@
     height: calc(var(--menu-bar-height) * 0.7);
 }
 
+.lang-swtch {
+    position: fixed;
+    height: var(--menu-bar-height);
+    width: var(--menu-bar-height);
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
 
 /* BUTTON */
 
