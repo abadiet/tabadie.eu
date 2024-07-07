@@ -34,13 +34,13 @@ window.addEventListener("DOMContentLoaded", function() {
         link.classList.add("link-effect-activated");
         setTimeout(function () {
             link.classList.remove("link-effect-activated");
-        }, 300);
+        }, 500);
         setTimeout(activate_link, 5000, link);
     }
 
     let link_id = 0;
     document.querySelectorAll(".link.link-effect").forEach(link => {
-        setTimeout(activate_link, link_id * 150, link);
+        setTimeout(activate_link, link_id * 250, link);
         link_id += 1;
     });
 });
