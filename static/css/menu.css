@@ -71,13 +71,21 @@
     text-decoration: none;
     font-weight: bold;
     opacity: 0.8;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: opacity var(--menu-sliding-duration) ease-in-out, -webkit-transform calc(var(--menu-sliding-duration)) ease-in-out;
+    transition: opacity var(--menu-sliding-duration) ease-in-out, -webkit-transform calc(var(--menu-sliding-duration)) ease-in-out;
+    -o-transition: opacity var(--menu-sliding-duration) ease-in-out, transform calc(var(--menu-sliding-duration)) ease-in-out;
     transition: opacity var(--menu-sliding-duration) ease-in-out, transform calc(var(--menu-sliding-duration)) ease-in-out;
+    transition: opacity var(--menu-sliding-duration) ease-in-out, transform calc(var(--menu-sliding-duration)) ease-in-out, -webkit-transform calc(var(--menu-sliding-duration)) ease-in-out;
 }
 
 #lang-swtch.hide {
     opacity: 0;
-    transform: translateX(28px);
+    -webkit-transform: translateX(28px);
+        -ms-transform: translateX(28px);
+            transform: translateX(28px);
     pointer-events: none;
 }
 
