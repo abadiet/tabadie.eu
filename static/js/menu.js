@@ -18,6 +18,7 @@ const menuButton = parent.document.getElementById('menu-button');
 const menuBar = parent.document.getElementById('menu-bar');
 const menuOpen = document.getElementById('menu-open');
 const backArrow = document.getElementById('back-arrow');
+const langSwtch = parent.document.getElementById('lang-swtch');
 
 const primaryMenu = document.getElementById('primary-menu');
 
@@ -130,6 +131,7 @@ function slideLeft(menu) {
 function closeSecondaries(menu) {
     if (!menuStayOpen) {
         slideLeft(backArrow);
+        langSwtch.classList.remove('hide');
         slideLeft(projectsMenu);
         setTimeout(() => {slideRight(primaryMenu);}, slidingDuration);
     } else {
@@ -140,6 +142,7 @@ function closeSecondaries(menu) {
 function openSecondaries(menu) {
     if (!menuStayOpen) {
         slideLeft(primaryMenu);
+        langSwtch.classList.add('hide');
         slideRight(backArrow);
         setTimeout(() => {slideRight(menu);}, slidingDuration);
     } else {
@@ -190,6 +193,7 @@ function menuButton_click() {
         menuOpen.style.setProperty('--menu-open-scaleY', '1');
         menuOpen.classList.remove('show');
         menuBar.classList.add('show');
+        langSwtch.classList.remove('hide');
 
         // smoothly closing every menus, even those not shown
         closeMenu(primaryMenu, elementsOpactityTransitionDuration);

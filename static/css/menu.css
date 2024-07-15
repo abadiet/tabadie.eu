@@ -61,7 +61,7 @@
     height: calc(var(--menu-bar-height) * 0.7);
 }
 
-.lang-swtch {
+#lang-swtch {
     position: fixed;
     height: var(--menu-bar-height);
     width: var(--menu-bar-height);
@@ -69,8 +69,16 @@
     background: none;
     cursor: pointer;
     text-decoration: none;
-    opacity: 0.8;
     font-weight: bold;
+    opacity: 0.8;
+    transform: translateX(0);
+    transition: opacity var(--menu-sliding-duration) ease-in-out, transform calc(var(--menu-sliding-duration)) ease-in-out;
+}
+
+#lang-swtch.hide {
+    opacity: 0;
+    transform: translateX(28px);
+    pointer-events: none;
 }
 
 

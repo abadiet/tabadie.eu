@@ -515,6 +515,32 @@ body {
 #about > .column-container > * {
     min-width: 0;
 }
+#timeline {
+    position: relative;
+    width: 100%;
+    margin-top: calc(5 * var(--margin-element-second));
+    --gap: 20px;
+}
+#timeline > .row-container {
+    width: 80%;
+    margin-left: 10%;
+    --gap: 0;
+}
+#timeline > .row-container:nth-child(1) > * {
+    height: 8px;
+    background-color: var(--background-color-second);
+    opacity: 0.5;
+    border-radius: 4px;
+}
+#timeline > .row-container > :nth-child(1) {
+    width: 33%;
+}
+#timeline > .row-container > :nth-child(2) {
+    width: 49.5%;
+}
+#timeline > .row-container > :nth-child(3) {
+    width: 16.5%;
+}
 
 #projects {
     --gap: var(--margin-element-second);
