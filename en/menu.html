@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/static/css/base.css">
-        <link rel="stylesheet" type="text/css" href="/static/css/menu.css">
-        <script src="/static/js/viewport.js"></script>
-        <script src="/static/js/text.js"></script>
-    </head>
-<body class="color-inverted" style="height: 100vh; background-color: #00000000;">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/menu.css">
+    <script src="/static/js/viewport.js"></script>
+    <script src="/static/js/text.js"></script>
+  </head>
+  <body class="color-inverted" style="height: 100vh; background-color: #00000000;">
     <div id="menu-open" class="menu-open"></div>
     <button id="back-arrow" class="menu-back-arrow">
-        <div class="line"></div>
-        <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
     </button>
     <div id="row-container-menu" class="row-container left-align top-align row-container-menu">
-        <div id="primary-menu" class="column-container left-align menu" style="--gap: 0;">
-            <a href="/en#about" onclick="parent.document.getElementById('menu-button').click();" class="text preserve title link link-effect" target="_parent">About</a>
-            <button id="projects" type="button" class="text preserve title link bold-link link-effect">Projects</button>
-            <a href="/en#hobbies" onclick="parent.document.getElementById('menu-button').click();" class="text preserve title link link-effect" target="_parent">Hobbies</a>
-            <a href="/en#contacts" onclick="parent.document.getElementById('menu-button').click();" class="text preserve title link link-effect" target="_parent">Contacts</a>
+      <div id="primary-menu" class="column-container left-align menu" style="--gap: 0;">
+        <a href="/en#about" onclick="parent.document.getElementById('menu-button').click();" class="text preserve title link link-effect" target="_parent">About</a>
+        <button id="projects" type="button" class="text preserve title link bold-link link-effect">Projects</button>
+        <a href="/en#hobbies" onclick="parent.document.getElementById('menu-button').click();" class="text preserve title link link-effect" target="_parent">Hobbies</a>
+        <a href="/en#contacts" onclick="parent.document.getElementById('menu-button').click();" class="text preserve title link link-effect" target="_parent">Contacts</a>
+      </div>
+      <div id="submenus">
+        <div id="projects-menu" class="column-container left-align menu" style="--gap: 0;">
+          <a href="/en#projects" onclick="parent.document.getElementById('menu-button').click();" class="text preserve title link link-effect" target="_parent">Projects</a>
+          <a href="/en/projects/PNEATM" class="text preserve title link link-effect" target="_parent">PNEATM</a>
+          <a href="https://github.com/abadiet/RICOH-THETA-Vision" class="text preserve title link link-effect" target="_parent">RICOH THETA</a>
+          <a href="https://github.com/abadiet/GarminServerLess" class="text preserve title link link-effect" target="_parent">GSL</a>
+          <a href="https://github.com/abadiet/Ensmasteel-2023-2024-Code" class="text preserve title link link-effect" target="_parent">ENSMASTEEL</a>
+          <a href="https://github.com/abadiet/ESP-website" class="text preserve title link link-effect" target="_parent">ESP's Website</a>
+          <a href="https://github.com/abadiet/ISAE-ENSMA-Gala-2024-website" class="text preserve title link link-effect" target="_parent">Gala's Website</a>
+          <a href="/en/projects/distributed-computing" class="text preserve title link link-effect" target="_parent">Distributed Computing</a>
+          <a href="/en/projects/NEAT" class="text preserve title link link-effect" target="_parent">NEAT</a>
+          <a href="/en/projects/spotify-mod" class="text preserve title link link-effect" target="_parent">Spotify Modding</a>
+          <a href="/en/projects/BETIA" class="text preserve title link link-effect" target="_parent">BETIA</a>
         </div>
-        <div id="submenus">
-            <div id="projects-menu" class="column-container left-align menu" style="--gap: 0;">
-                <a href="/en#projects" onclick="parent.document.getElementById('menu-button').click();" class="text preserve title link link-effect" target="_parent">Projects</a>
-                <a href="/en/projects/PNEATM" class="text preserve title link link-effect" target="_parent">PNEATM</a>
-                <a href="https://github.com/abadiet/GarminServerLess" class="text preserve title link link-effect" target="_parent">GSL</a>
-                <a href="https://github.com/abadiet/Ensmasteel-2023-2024-Code" class="text preserve title link link-effect" target="_parent">ENSMASTEEL</a>
-                <a href="https://github.com/abadiet/ESP-website" class="text preserve title link link-effect" target="_parent">ESP's Website</a>
-                <a href="https://github.com/abadiet/ISAE-ENSMA-Gala-2024-website" class="text preserve title link link-effect" target="_parent">Gala's Website</a>
-                <a href="/en/projects/distributed-computing" class="text preserve title link link-effect" target="_parent">Distributed Computing</a>
-                <a href="/en/projects/NEAT" class="text preserve title link link-effect" target="_parent">NEAT</a>
-                <a href="/en/projects/spotify-mod" class="text preserve title link link-effect" target="_parent">Spotify Modding</a>
-                <a href="/en/projects/BETIA" class="text preserve title link link-effect" target="_parent">BETIA</a>
-            </div>
-        </div>
+      </div>
     </div>
     <script src="/static/js/menu.js"></script>
-</body>
+  </body>
 </html>
